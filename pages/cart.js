@@ -311,6 +311,36 @@ const Cart = () => {
                 )}
               </TableCell>
             </TableRow>
+            {/* <TableRow>
+              <TableCell sx={{ fontWeight: "bold", color: "#000" }}>
+                Shipping
+              </TableCell>
+              <TableCell align="right" sx={{ color: "#000" }}>
+                ₹ 50.00
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell sx={{ fontWeight: "bold", color: "#000" }}>
+                Tax (18%)
+              </TableCell>
+              <TableCell align="right" sx={{ color: "#000" }}>
+                ₹ {calculateTax()}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell sx={{ fontWeight: "bold", color: "#000" }}>
+                Total
+              </TableCell>
+              <TableCell
+                align="right"
+                sx={{ fontWeight: "bold", color: "#000" }}
+              >
+                ₹{" "}
+                {(calculateTotal() + 50 + parseFloat(calculateTax())).toFixed(
+                  2
+                )}
+              </TableCell>
+            </TableRow> */}
           </TableBody>
         </Table>
       </TableContainer>
