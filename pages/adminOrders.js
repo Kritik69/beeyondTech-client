@@ -51,7 +51,9 @@ const AdminOrders = () => {
   }, [selectedTab]);
 
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    const socket = io(
+      "https://beeyondtech-server-562780667822.us-central1.run.app"
+    );
 
     socket.on("orderStatusUpdated", (updatedOrder) => {
       setOrders((prev) =>
