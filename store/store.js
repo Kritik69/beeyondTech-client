@@ -11,7 +11,7 @@ const useAuthStore = create(
       clearToken: () => set({ token: null, user: null }),
     }),
     {
-      name: "auth-storage", // LocalStorage key name
+      name: "auth-storage",
     }
   )
 );

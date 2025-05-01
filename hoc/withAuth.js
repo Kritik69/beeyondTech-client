@@ -12,14 +12,14 @@ const withAuth = (WrappedComponent) => {
       if (!token) {
         router.replace("/login");
       }
-      console.log(user, "user"); // Log user object to console
+      console.log(user, "user");
       if (user?.role !== "admin") {
-        router.replace("/"); // Redirect to home if not admin
+        router.replace("/");
       }
     }, [token]);
 
     if (!token) {
-      return null; // or a loading spinner
+      return null;
     }
 
     return <WrappedComponent {...props} />;

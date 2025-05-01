@@ -1,41 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Project Overview
+This project is built using Material-UI for creating a clean and responsive user interface. Below is a detailed breakdown of the key features and technologies used in this project:
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
-"# beeyondTech-client" 
+Features
+1. Protected Pages
+The application ensures that sensitive pages are protected.
+For example, the Dashboard Page (used for delivery management) is restricted to authorized users only. Unauthorized users cannot access this page.
+2. Axios Interceptor
+An Axios Interceptor is implemented to automatically attach the authentication token to every request sent to the server.
+This ensures secure communication between the frontend and backend without the need to manually include the token in every API call.
+3. SWR for Data Fetching
+The project uses SWR (Stale-While-Revalidate) for efficient data fetching.
+SWR ensures that the application always displays the latest data by continuously fetching updates in the background.
+4. Real-Time Updates with Socket.IO
+Socket.IO is integrated to provide real-time updates for delivery statuses.
+This feature ensures that users receive live updates without needing to refresh the page.
+5. Global State Management with Zustand
+The application uses Zustand for managing global state.
+Zustand provides a lightweight and efficient way to handle shared state across components without the complexity of larger state management libraries.
+Technologies Used
+Material-UI: For building a modern and responsive user interface.
+Axios: For making HTTP requests, with an interceptor for token management.
+SWR: For efficient and continuous data fetching.
+Socket.IO: For real-time communication and updates.
+Zustand: For global state management.
+Summary
+This project is designed to provide a seamless user experience with a focus on security, real-time updates, and efficient data handling. By leveraging modern tools like Material-UI, SWR, and Socket.IO, the application ensures that users have access to the latest information in a secure and user-friendly environment.

@@ -45,7 +45,7 @@ const Login = () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        backgroundColor: "#f7f7f7", // Pastel background
+        backgroundColor: "#f7f7f7",
       }}
     >
       <Container

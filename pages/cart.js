@@ -36,12 +36,12 @@ const Cart = () => {
         (total, item) => total + item.quantity * item.product.price,
         0
       ) || 0
-    ); // Default to 0 if cart is empty or undefined
+    );
   };
 
   const calculateTax = () => {
     const total = calculateTotal();
-    return (total + 50) * 0.18; // Default tax calculation
+    return (total + 50) * 0.18;
   };
 
   const createOrder = async () => {
@@ -81,23 +81,23 @@ const Cart = () => {
         },
       });
       console.log(response.data);
-      setCart([]); // Clear the cart after order creation
-      router.push(`/myOrders`); // Redirect to order confirmation page
+      setCart([]);
+      router.push(`/myOrders`);
     } catch (error) {
       console.error("Error creating order", error);
     }
   };
 
   const handleCheckout = () => {
-    setOpenDialog(true); // Open the payment dialog
+    setOpenDialog(true);
   };
 
   const handlePayment = async () => {
-    setIsProcessing(true); // Simulate payment processing
+    setIsProcessing(true);
     setTimeout(async () => {
       setIsProcessing(false);
-      setOpenDialog(false); // Close the dialog
-      await createOrder(); // Call the createOrder function
+      setOpenDialog(false);
+      await createOrder();
     }, 2000); // Simulate a 2-second payment process
   };
 

@@ -155,9 +155,9 @@ const Home = () => {
                 item
                 key={product._id}
                 sx={{
-                  flex: "0 0 330px", // Fixed width for each card
-                  maxWidth: "330px", // Prevent cards from exceeding the fixed width
-                  margin: "1rem", // Add spacing between cards
+                  flex: "0 0 330px",
+                  maxWidth: "330px",
+                  margin: "1rem",
                 }}
               >
                 <Card

@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
 // Add a request interceptor to include the token
 axiosInstance.interceptors.request.use(
   (config) => {
-    const { token, user } = useAuthStore.getState(); // Get the token from your auth store
+    const { token, user } = useAuthStore.getState();
     if (token) {
       console.log("Through interceptor");
       config.headers.Authorization = `Bearer ${token}`;

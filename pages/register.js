@@ -45,7 +45,7 @@ const Register = () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        backgroundColor: "#f7f7f7", // Pastel background color
+        backgroundColor: "#f7f7f7",
       }}
     >
       <Container

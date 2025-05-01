@@ -8,7 +8,7 @@ const useCartStore = create(
       setCart: (cart) => set({ cart }),
     }),
     {
-      name: "auth-storage", // LocalStorage key name
+      name: "auth-storage",
     }
   )
 );
