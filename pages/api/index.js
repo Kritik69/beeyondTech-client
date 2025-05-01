@@ -1,4 +1,6 @@
-export const baseUrl = "http://localhost:5001/api/";
+// export const baseUrl = "http://localhost:5001/api/";
+export const baseUrl =
+  "https://beeyondtech-server-562780667822.us-central1.run.app/api/";
 
 // Authentication APIs
 export const loginAPI = baseUrl + "auth/login";
