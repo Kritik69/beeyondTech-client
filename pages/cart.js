@@ -31,14 +31,17 @@ const Cart = () => {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const calculateTotal = () => {
-    return cart?.reduce(
-      (total, item) => total + item.quantity * item.product.price,
-      0
-    );
+    return (
+      cart?.reduce(
+        (total, item) => total + item.quantity * item.product.price,
+        0
+      ) || 0
+    ); // Default to 0 if cart is empty or undefined
   };
 
   const calculateTax = () => {
-    return ((calculateTotal() + 50) * 0.18).toFixed(2); // Assuming 18% tax
+    const total = calculateTotal();
+    return ((total + 50) * 0.18).toFixed(2); // Default tax calculation
   };
 
   const createOrder = async () => {
